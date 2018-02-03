@@ -1,0 +1,22 @@
+{
+  "name": "twitter-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "twitter",
+    "bot"
+  ],
+  "author": "Charles Ewert",
+  "license": "ISC",
+  "dependencies": {
+    "eslint": "^4.16.0",
+    "twit": "^2.2.9"
+  },
+  "devDependencies": {
+    "eslint-config-google": "^0.9.1"
+  }
+}
