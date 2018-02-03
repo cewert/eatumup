@@ -1,4 +1,3 @@
-/*  eslint linebreak-style: ["error", "windows"]    */
 module.exports = {
     consumer_key: 'CHANGEME',
     consumer_secret: 'CHANGEME',

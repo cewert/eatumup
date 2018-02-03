@@ -1,4 +1,3 @@
-/*  eslint linebreak-style: ["error", "windows"]    */
 console.log('Twitter bot is starting.');
 
 const Twit = require('twit');
