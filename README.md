@@ -7,7 +7,7 @@
 
 ## Installing
 
-1. Clone the repo folder to your local machine and open it up
+1. Clone the repo folder to your local machine and open it
 ```
 git clone https://github.com/cewert/eatumup.git
 cd eatumup
@@ -16,7 +16,7 @@ cd eatumup
 ```
 npm install
 ```
-3. Open **default-config.js** and replace all instances of CHANGEME to your [Twitter API credentials](https://apps.twitter.com).
+3. Open **default-config.js** and replace all instances of CHANGEME with your [Twitter API credentials](https://apps.twitter.com).
 ```
 module.exports = {
     consumer_key: 'CHANGEME',
