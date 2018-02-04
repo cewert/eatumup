@@ -1,56 +1,52 @@
-console.log('Twitter bot is starting.');
+console.log('Twitter bot is starting...');
 
 const Twit = require('twit');
 const config = require('./config');
 const T = new Twit(config);
 
-//
-// filter the public stream
-//
+// filter tweets
 const stream = T.stream('statuses/filter', {track: "eat um up tigers, eat um' up tigers, eat um up #tigers, eat um' up #tigers, #eatumuptigers"});
-
+// stream all public tweets based on filter
 stream.on('tweet', function(tweet) {
-    //   console.log(tweet);
+    // console.log(tweet);
+
+    // save the ID and screen name of the tweet author
     const tweetUserID = tweet.id_str;
     const tweetUserName = tweet.user.screen_name;
-    const vidPath = 'Z:\\eatumup.mp4';
-    // only reply to tweets - NOT retweets
+    const vidPath = './eatumup.mp4';
+    // only reply to tweets - NOT retweets or replies
     if (!isReply(tweet)) {
-        console.log('New tigers tweet detected!');
-        // post media via the chunked media upload API.
+        console.log('New tigers tweet detected');
+        // post video via the chunked media upload API.
         T.postMediaChunked({file_path: vidPath}, function(err, data, response) {
             // console.log(data);
             if (!err) {
                 const mediaIdStr = data.media_id_string;
                 const metaParams = {media_id: mediaIdStr};
-                // console.log(data.media_id_string);
+                // use the mediaId we received from postMediaChunked
                 T.post('media/metadata/create', metaParams, function(err, data, response) {
                     if (!err) {
                         // now we can reference the media and post a tweet (media will attach to the tweet)
                         const params = {in_reply_to_status_id: tweetUserID, status: '@' + tweetUserName, media_ids: mediaIdStr};
                         T.post('statuses/update', params, function(err, data, response) {
                             if (!err) {
-                                console.log('TWEET CREATED SUCCSESSFULLY!!!');
-                                console.log('Link - https://twitter.com/EatUmUpTigers/status/' + data.id_str);
+                                console.log('Reply successfully sent! - https://twitter.com/EatUmUpTigers/status/' + data.id_str);
                             } else {
-                                console.log('TWEET CREATION ERROR - ');
-                                console.log(err);
+                                console.log('ERROR calling statuses/update - ' + err);
                             }
                         });
                     } else {
-                        console.log('METADATA/CREATE ERROR - ' + err);
+                        console.log('ERROR calling media/metadata/create - ' + err);
                     }
                 });
             } else {
-                console.log('POST MEDIA CHUNKED ERROR - ' + err);
+                console.log('ERROR calling postMediaChunked - ' + err);
             }
         });
     }
 });
 /**
- * It returns whether the tweet is a reply or a retweet
- * @params tweet object
- * @returns boolean
+ * Returns true if the tweet is a retweet or a reply
  */
 function isReply(tweet) {
     if (tweet.retweeted_status

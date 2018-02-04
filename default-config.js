@@ -1,3 +1,4 @@
+// These keys are obtained from Twitter @ https://apps.twitter.com
 module.exports = {
     consumer_key: 'CHANGEME',
     consumer_secret: 'CHANGEME',
