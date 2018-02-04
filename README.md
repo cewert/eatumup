@@ -12,7 +12,6 @@ Clone the repo to your local machine
 git clone https://github.com/cewert/eatumup.git
 ```
 Open **default-config.js** and insert your Twitter API credentials.
-Save As **config.js**
 ```
 // These keys are obtained from Twitter @ https://apps.twitter.com
 module.exports = {
@@ -23,6 +22,7 @@ module.exports = {
     timeout_ms: 60*1000, // optional HTTP request timeout to apply to all requests.
 };
 ```
+Save As **config.js**
 
 ## Deployment
 
