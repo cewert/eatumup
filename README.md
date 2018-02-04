@@ -2,8 +2,8 @@
 
 ### Prerequisites
 
-[Node.js](https://nodejs.org)
-[NPM](https://www.npmjs.com/) (Comes with Node.js)
+* [Node.js](https://nodejs.org)
+* [NPM](https://www.npmjs.com/) (Comes with Node.js)
 
 ### Installing
 
@@ -11,9 +11,8 @@ Clone the repo to your local machine
 ```
 git clone https://github.com/cewert/eatumup.git
 ```
-Open **default-config.js** and insert your Twitter API credentials.
+Open **default-config.js** and insert your [Twitter API credentials](https://apps.twitter.com).
 ```
-// These keys are obtained from Twitter @ https://apps.twitter.com
 module.exports = {
     consumer_key: 'CHANGEME',
     consumer_secret: 'CHANGEME',
@@ -33,8 +32,8 @@ node app.js
 
 ## Built With
 
-* [Node.js](https://nodejs.org) - the latest LTS version
-* [NPM](https://www.npmjs.com/) - Comes with Node.js
+* [Node.js](https://nodejs.org)
+* [NPM](https://www.npmjs.com/)
 * [twit](https://github.com/ttezel/twit) - Node.js module to access the Twitter API
 * [Visual Studio Code](https://code.visualstudio.com/) - Text editor
 
