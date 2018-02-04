@@ -9,7 +9,7 @@ const Twit = require('twit');
 const T = new Twit(config);
 
 // filter tweets
-const stream = T.stream('statuses/filter', {track: "eat um up tigers, eat um' up tigers, eat um up #tigers, eat um' up #tigers, #eatumuptigers, headed comerica tigers, on my way comerica tigers, see tigers comerica"});
+const stream = T.stream('statuses/filter', {track: "eat um up tigers, eat um' up tigers, eat um up #tigers, eat um' up #tigers, #eatumuptigers, headed comerica tigers, on my way comerica tigers, see tigers comerica, watch tigers comerica game, road trip comerica excited"});
 // stream all public tweets based on filter
 stream.on('tweet', function(tweet) {
     // console.log(tweet);

@@ -7,11 +7,16 @@
 
 ### Installing
 
-Clone the repo to your local machine
+1. Clone the repo folder to your local machine and open it up
 ```
 git clone https://github.com/cewert/eatumup.git
+cd eatumup
 ```
-Open **default-config.js** and insert your [Twitter API credentials](https://apps.twitter.com).
+2. Use NPM to install any missing dependencies
+```
+npm install
+```
+3. Open **default-config.js** and replace all instances of CHANGEME to your [Twitter API credentials](https://apps.twitter.com).
 ```
 module.exports = {
     consumer_key: 'CHANGEME',
@@ -21,11 +26,11 @@ module.exports = {
     timeout_ms: 60*1000, // optional HTTP request timeout to apply to all requests.
 };
 ```
-Save As **config.js**
+4. When finished modifying default-config.js, save file as **config.js**
 
 ## Deployment
 
-Open a command prompt (or terminal) from the app's root directory and tell Node to run app.js
+1. Open a command prompt (or terminal) from the app's root directory and tell Node to run app.js
 ```
 node app.js
 ```
