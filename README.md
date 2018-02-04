@@ -34,7 +34,7 @@ node app.js
 
 * [Node.js](https://nodejs.org)
 * [NPM](https://www.npmjs.com/)
-* [twit](https://github.com/ttezel/twit) - Node.js module to access the Twitter API
+* [twit](https://github.com/ttezel/twit) - Twitter API Client for Node.js
 * [Visual Studio Code](https://code.visualstudio.com/) - Text editor
 
 

@@ -1,11 +1,15 @@
 console.log('Twitter bot is starting...');
-
-const Twit = require('twit');
+// needed for timestamps
+var d = new Date();
+d.toLocaleDateString
+// Twitter API login credentials
 const config = require('./config');
+// Twitter API client for node
+const Twit = require('twit');
 const T = new Twit(config);
 
 // filter tweets
-const stream = T.stream('statuses/filter', {track: "eat um up tigers, eat um' up tigers, eat um up #tigers, eat um' up #tigers, #eatumuptigers"});
+const stream = T.stream('statuses/filter', {track: "eat um up tigers, eat um' up tigers, eat um up #tigers, eat um' up #tigers, #eatumuptigers, headed comerica tigers, on my way comerica tigers, see tigers comerica"});
 // stream all public tweets based on filter
 stream.on('tweet', function(tweet) {
     // console.log(tweet);
