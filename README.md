@@ -12,7 +12,7 @@
 git clone https://github.com/cewert/eatumup.git
 cd eatumup
 ```
-2. Use NPM to install any missing dependencies
+2. Use NPM to install app dependencies
 ```
 npm install
 ```
@@ -30,7 +30,7 @@ module.exports = {
 
 ## Deployment
 
-1. Open a command prompt (or terminal) from the app's root directory and tell Node to run app.js
+1. Tell Node to run app.js
 ```
 node app.js
 ```
