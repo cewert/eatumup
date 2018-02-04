@@ -5,7 +5,7 @@
 * [Node.js](https://nodejs.org)
 * [NPM](https://www.npmjs.com/) (Comes with Node.js)
 
-### Installing
+## Installing
 
 1. Clone the repo folder to your local machine and open it up
 ```
@@ -30,7 +30,7 @@ module.exports = {
 
 ## Deployment
 
-1. Tell Node to run app.js
+Tell Node to run app.js
 ```
 node app.js
 ```
