@@ -17,7 +17,7 @@ cd eatumup
 npm install
 ```
 3. Open **default-config.js** and replace all instances of CHANGEME with your [Twitter API credentials](https://apps.twitter.com).
-```
+``` js
 module.exports = {
     consumer_key: 'CHANGEME',
     consumer_secret: 'CHANGEME',
