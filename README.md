@@ -3,7 +3,7 @@
 ### Prerequisites
 
 * [Node.js](https://nodejs.org)
-* [NPM](https://www.npmjs.com/) (Comes with Node.js)
+* [NPM](https://www.npmjs.com/)
 
 ## Installing
 
